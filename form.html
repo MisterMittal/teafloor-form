@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<!-- BS not linked in this project but custom CSS written imitating BS classes. -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Checkout Customer Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-area">
+                    <div class="d-flex just-cont-spc-bw align-items-c">
+                        <input type="button" value="01 CUSTOMER INFO" class="text-center form-stages reached-stages"
+                            id="first-stage" onclick="stage1Tab()">
+                        <input type="button" value="02 SHIPPING INFO" class="text-center form-stages" id="second-stage"
+                            onclick="stage2Tab()">
+                        <input type="button" value="03 PAYMENT SELECTION" class="text-center form-stages"
+                            id="third-stage" onclick="stage3Tab()">
+                    </div>
+
+                    <form class="cust-form" id="cust-info-form">
+                        <h3>Customer Information</h3>
+                        <div class="row mb-2">
+                            <div class="col-md-6">
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="last-name">Last name</label>
+                                <input type="text" id="last-name">
+                            </div>
+                        </div>
+                        <label for="cust-address">Address</label>
+                        <input type="text" id="cust-address" class="mb-2">
+                        <div class="row mb-2">
+                            <div class="col-md-6">
+                                <label for="cust-country">Country</label>
+                                <select form="cust-info-form" id="cust-country">
+                                    <option value="India">India</option>
+                                    <option value="U.S.">U.S.</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cust-state">State</label>
+                                <input type="text" id="cust-state">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6">
+                                <label for="cust-post-code">City/Postal code</label>
+                                <div class="d-flex">
+                                    <input type="text" id="cust-post-code">
+                                    <button class="postal-search">FIND</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cust-phone">Phone</label>
+                                <input type="tel" id="cust-phone">
+                            </div>
+                        </div>
+                        <div class="d-flex just-cont-spc-bw align-items-c">
+                            <div>
+                                <button class="back-btn custom-text">Back to shop</button>
+                            </div>
+                            <div>
+                                <input type="button" value="CONTINUE TO SHOPPING" class="yellow-btn continue-btn"
+                                    id="continue-btn-1" onclick="toStage2()">
+                            </div>
+                        </div>
+                    </form>
+
+                    <form class="cust-form d-none" id="shipping-info-form">
+                        <h3>Shipping Information</h3>
+                        <div class="d-flex">
+                            <div class="address-block">
+                                <p>
+                                    <span>Jamy Larson</span>
+                                    <br>
+                                    <span>Unit 2 Green Mount Retail Park</span>
+                                    <br>
+                                    <span>Halifax</span>
+                                    <br>
+                                    <span>HXI5QN</span>
+                                    <br>
+                                    <span>Tel: 0344 332 5931</span>
+                                </p>
+                                <div class="d-flex address-btns">
+                                    <input type="button" value="Edit Address">
+                                    <input type="button" value="Add New">
+                                </div>
+                            </div>
+                            <div class="map-block"></div>
+                        </div>
+                        <h3>Shipping Method</h3>
+                        <div class="d-flex just-cont-spc-bw">
+                            <div class="delivery-opt-outer pos-rel">
+                                <label for="std-delivery">
+                                    <input type="radio" class="delivery-opt-inner" id="std-delivery"
+                                        name="Delivery Method" value="Standard" checked />
+                                    <h4>Standard delivery</h4>
+                                    <p class="delivery-price">Free</p>
+                                    <p>Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
+                                </label>
+                            </div>
+                            <div class="delivery-opt-outer pos-rel">
+                                <label for="fast-delivery">
+                                    <input type="radio" class="delivery-opt-inner" id="fast-delivery"
+                                        name="Delivery Method" value="Fast" />
+                                    <h4>Fast delivery</h4>
+                                    <p class="delivery-price">€ 8.00</p>
+                                    <p>Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex just-cont-spc-bw align-items-c">
+                            <div>
+                                <button class="back-btn custom-text">Back to shop</button>
+                            </div>
+                            <div>
+                                <input type="button" value="CONTINUE TO SHOPPING" class="yellow-btn continue-btn"
+                                    id="continue-btn-2" onclick="toStage3()">
+                            </div>
+                        </div>
+                    </form>
+
+                    <form class="cust-form d-none" id="payment-selection-form">
+                        <h3>Payment Selection</h3>
+                        <div class="payment-opt-outer pos-rel">
+                            <label for="cards-payment">
+                                <input type="radio" class="delivery-opt-inner" id="cards-payment" name="Payment Method"
+                                    value="Cards" checked />
+                                <h4>Cards</h4>
+                                <p class="delivery-price">Free</p>
+                                <p>Safe money transfer using your bank account. Visa, Maestro, Mastercard, American
+                                    Express, Barclays Visa, Maestro, Mastercard, American Express, Barclays</p>
+                            </label>
+                        </div>
+                        <div class="payment-opt-outer pos-rel">
+                            <label for="paypal-payment">
+                                <input type="radio" class="delivery-opt-inner" id="paypal-payment" name="Payment Method"
+                                    value="PayPal" />
+                                <h4>PayPal</h4>
+                                <p class="delivery-price">€ 8.00</p>
+                                <p>Safe money transfer using your bank account. Visa, Maestro, Mastercard, American
+                                    Express, Barclays Visa, Maestro, Mastercard, American Express, Barclays</p>
+                            </label>
+                        </div>
+                        <div class="payment-opt-outer pos-rel">
+                            <label for="razorpay-payment">
+                                <input type="radio" class="delivery-opt-inner" id="razorpay-payment"
+                                    name="Payment Method" value="Razorpay" />
+                                <h4>Razorpay</h4>
+                                <p class="delivery-price">€ 8.00</p>
+                                <p>Safe money transfer using your bank account. Visa, Maestro, Mastercard, American
+                                    Express, Barclays Visa, Maestro, Mastercard, American Express, Barclays</p>
+                            </label>
+                        </div>
+                        <div class="d-flex just-cont-spc-bw align-items-c">
+                            <div>
+                                <button class="back-btn custom-text">Back to shop</button>
+                            </div>
+                            <div>
+                                <button class="yellow-btn continue-btn" id="continue-btn-3">CONTINUE TO
+                                    SHOPPING</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3 cart-region">
+                <div class="d-flex just-cont-spc-bw align-items-baseline cart-header bord-bot">
+                    <h3 class="d-inline-bl">Shopping Cart</h3>
+                    <p class="d-inline-bl total-products">2</p>
+                </div>
+                <div class="product-cart-listing">
+                    <div class="cart-item d-flex align-items-c">
+                        <div class="cart-item-img">
+                            <img src="images/insta1.jpg" />
+                        </div>
+                        <div class="cart-item-text">
+                            <p class="m-0">Lightweight College Backpack</p>
+                            <p class="m-0">€ 99.90</p>
+                        </div>
+                    </div>
+                    <div class="cart-item d-flex align-items-c">
+                        <div class="cart-item-img">
+                            <img src="images/insta1.jpg" />
+                        </div>
+                        <div class="cart-item-text">
+                            <p class="m-0">Lightweight College Backpack</p>
+                            <p class="m-0">€ 99.90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-show bord-bot">
+                    <button class="best-price-btn">Tap for the best price</button>
+                </div>
+                <div class="pricing-region">
+                    <div class="d-flex just-cont-spc-bw align-items-c bord-bot">
+                        <p class="darkish-text">Have a Coupon code</p>
+                        <button class="coupon-btn yellow-btn">ADD</button>
+                    </div>
+                    <div class="subtotal-region bord-bot">
+                        <p class="d-flex just-cont-spc-bw"><span>Subtotal</span><span>€ 169.80</span></p>
+                        <p class="d-flex just-cont-spc-bw"><span>Shipping</span><span>Free</span></p>
+                    </div>
+                    <div class="total-region">
+                        <p class="d-flex just-cont-spc-bw"><span>Total</span><span>€ 169.80</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center darkish-text">Authenticity is necessary</h2>
+    <div class="authenticity-block pt-4 pb-4">
+        <div>
+            <img src="images/logo-1.jpg" />
+        </div>
+        <div>
+            <img src="images/logo-2.jpg" />
+        </div>
+        <div>
+            <img src="images/logo-3.jpg" />
+        </div>
+        <div>
+            <img src="images/logo-4.jpg" />
+        </div>
+        <div>
+            <img src="images/logo-5.jpg" />
+        </div>
+        <div>
+            <img src="images/logo-6.jpg" />
+        </div>
+        <div>
+            <img src="images/logo-7.jpg" />
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

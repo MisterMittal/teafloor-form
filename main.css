@@ -1,0 +1,442 @@
+/* BS not linked in this project but custom CSS written imitating BS classes. */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    color: #788995;
+}
+
+.custom-text {
+    color: #788995;
+}
+
+.cart-region {
+    background: #fbfbfb;
+}
+
+.authenticity-block {
+    width: 90%;
+    background-color: #3e3e3e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.darkish-text {
+    color: #3e3e3e;
+}
+
+.cust-form input,
+select {
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #dde3e8;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.cust-form label {
+    letter-spacing: 0.4px;
+    color: #788995;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.total-products {
+    background-color: #ffb000;
+    border: 1px solid#ffb000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0 8px;
+}
+
+.just-cont-spc-bw {
+    justify-content: space-between;
+}
+
+.align-items-baseline {
+    align-items: baseline;
+}
+
+.align-items-c {
+    align-items: center;
+}
+
+.cart-item-img {
+    width: 40%;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.cart-item img {
+    width: 100%;
+}
+
+.cart-item-text {
+    padding-left: 8px;
+}
+
+.cart-header {
+    margin-bottom: 30px;
+}
+
+.bord-bot {
+    border-bottom: 1px solid #c7cbce;
+}
+
+.best-price-btn {
+    border: none;
+    background: unset;
+    color: #7ed321;
+    margin-bottom: 7px;
+    padding: 0;
+}
+
+.best-price-btn:hover {
+    cursor: pointer;
+}
+
+.product-cart-listing {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.yellow-btn {
+    border-radius: 3px;
+    box-shadow: 0 2px 7px 0 rgba(120, 137, 149, 0.26);
+    background-color: #ffb000;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #ffffff !important;
+    line-height: 32px;
+    border: none;
+    cursor: pointer;
+}
+
+.coupon-btn {
+    padding: 0 20px;
+}
+
+.continue-btn {
+    padding: 8px 20px;
+    margin-top: 8px;
+}
+
+.back-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+    padding: 0;
+}
+
+.form-stages {
+    width: 33%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbfbfb;
+    border: none;
+    cursor: pointer;
+}
+
+.form-stages p {
+    font-weight: 600;
+    margin: 0;
+}
+
+.reached-stages {
+    color: #1b2125;
+    background-color: rgba(255, 176, 0, 0.63) !important;
+}
+
+.reached-stages p {
+    color: #3e3e3e;
+}
+
+.postal-search {
+    background: none;
+    height: 48px;
+    border: 1px solid #cccaca;
+    border-left: none !important;
+    color: #ffb000;
+}
+
+.postal-search:hover {
+    text-decoration: underline;
+}
+
+.total-region {
+    font-weight: 600;
+}
+
+.total-region p {
+    color: #3e3e3e;
+}
+
+.address-block {
+    width: 50%;
+    border: 1px solid #eaecec;
+    border-radius: 5px;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    padding-left: 62px;
+}
+
+.map-block {
+    height: 200px;
+    background-color: #ece9e9;
+    width: 50%;
+    border: 1px solid #eaecec;
+    border-radius: 5px;
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.delivery-opt-outer {
+    width: 49%;
+    border: 1px solid #eaecec;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.delivery-opt-outer h4,
+.payment-opt-outer h4 {
+    position: absolute;
+    margin: 0;
+    left: 54px;
+    display: inline;
+    color: #3e3e3e;
+}
+
+.delivery-opt-outer p:nth-of-type(2) {
+    margin: 0 0 0 29px;
+    left: 30px;
+}
+
+.payment-opt-outer {
+    border: 1px solid #cdd5da;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.payment-opt-outer p:nth-of-type(2) {
+    margin: 0 0 0 29px;
+    left: 30px;
+}
+
+.delivery-opt-inner {
+    width: unset !important;
+    height: unset !important;
+    visibility: hidden;
+}
+
+.delivery-opt-inner::after {
+    content: 'a';
+    visibility: visible;
+    border: 2px solid #d6d5d5;
+    padding: 0 4px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.delivery-opt-inner:checked::after {
+    border-color: #0095f8 !important;
+}
+
+.delivery-opt-inner:checked::before {
+    content: '.';
+    visibility: visible;
+    font-size: 7px;
+    padding: 0 4px;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    top: 34px;
+    color: #0095f8;
+    background-color: #0095f8;
+}
+
+.delivery-price {
+    position: absolute;
+    right: 18px;
+    margin: 0;
+    top: 24px;
+    color: #3e3e3e;
+}
+
+button:focus,
+input[type="button"]:focus {
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    outline-color: #ffb000;
+}
+
+.address-btns input {
+    width: 25%;
+    background: none;
+    border: 0;
+    color: #0095f8;
+    padding-left: 0;
+}
+
+.address-btns input:hover {
+    text-decoration: underline;
+}
+
+/* Custom CSS for Bootstrap effects */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.col-md-3,
+.col-md-6,
+.col-md-9 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .col-md-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pb-4 {
+    padding-bottom: 1.5rem !important;
+}
+
+.mb-2 {
+    margin-bottom: .5rem !important;
+}
+
+.pt-4 {
+    padding-top: 1.5rem !important;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.d-inline-bl {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+button,
+input,
+select {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
